@@ -1,0 +1,12 @@
+18 ene 2025 13:18:00,223 INFO  ~ Starting C:\Users\didic\PES\KebabDelivery\play-1.5.3\KebabDelivery_webApp
+18 ene 2025 13:18:00,373 INFO  ~ Module docviewer is available (C:\Users\didic\PES\KebabDelivery\play-1.5.3\modules\docviewer)
+18 ene 2025 13:18:00,698 WARN  ~ You're running Play! in DEV mode
+18 ene 2025 13:18:00,943 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+18 ene 2025 13:18:10,894 INFO  ~ HikariPool-1 - Starting...
+18 ene 2025 13:18:10,914 INFO  ~ HikariPool-1 - Start completed.
+18 ene 2025 13:18:10,924 INFO  ~ Connected to jdbc:h2:mem:play for default
+18 ene 2025 13:18:11,874 INFO  ~ Application 'KebabDelivery_webApp' is now started !
+18 ene 2025 13:18:26,392 WARN  ~ SQL Error: 42122, SQLState: 42S22
+18 ene 2025 13:18:26,392 ERROR ~ Columna "POST" no encontrada
+Column "POST" not found; SQL statement:
+select comment0_.id as id1_0_, comment0_.author as author2_0_, comment0_.content as content3_0_, comment0_.pedido_id as pedido_i5_0_, comment0_.postedAt as postedAt4_0_ from Comment comment0_ where post=? [42122-196]
