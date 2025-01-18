@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92e034c1-e8f8-494b-bb56-8ad65ae254cf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/KebabDelivery_webApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KebabDelivery_webApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KebabDelivery_webApp.iws" beforeDir="false" afterPath="$PROJECT_DIR$/KebabDelivery_webApp.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Comment.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/initial-data.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BasicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Pedido" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Pedido" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.User" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.User" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +81,7 @@
       <workItem from="1737200579413" duration="45000" />
       <workItem from="1737200632667" duration="4280000" />
       <workItem from="1737214618031" duration="11000" />
-      <workItem from="1737214636537" duration="6245000" />
+      <workItem from="1737214636537" duration="9619000" />
     </task>
     <servers />
   </component>

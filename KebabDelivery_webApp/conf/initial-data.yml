@@ -1,4 +1,5 @@
-User(bob):
-  email: bob@gmail.com
-  password: secret
-  fullname: Bob
+User(admin):
+  email: admin@admin.com
+  password: admin
+  fullname: admin
+  isAdmin : true

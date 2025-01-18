@@ -17,8 +17,12 @@ public class Pedido extends Model {
     @ManyToOne
     public User author;
 
-    @OneToMany(mappedBy="pedido", cascade=CascadeType.ALL)
+    @ManyToOne
+    public Restaurante restaurante;
+
+    @ManyToMany
     public List<Comida> comidaList;
+
 
     public Pedido(User author, double precio, String content) {
         this.comidaList = new ArrayList<Comida>();
