@@ -6,34 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="92e034c1-e8f8-494b-bb56-8ad65ae254cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/KebabDelivery_webApp.iws" beforeDir="false" afterPath="$PROJECT_DIR$/KebabDelivery_webApp.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/Application/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/DocViewerPlugin" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/DocViewerPlugin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/initial-data.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.PlayDocumentation" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.PlayDocumentation" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.ProjectDocumentation" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.ProjectDocumentation" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$1" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$2" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$3" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$4" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.LangMenuHelper" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.LangMenuHelper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.LangMenuHelper$1" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.LangMenuHelper$1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.LangMenuHelper$LangMenu" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.LangMenuHelper$LangMenu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Comment" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Comment" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Pedido" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Pedido" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.User" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.User" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -49,22 +47,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/didic/PES/KebabDelivery/play-1.5.3/KebabDelivery_webApp/conf&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/didic/PES/PesWeb",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\didic\PES\KebabDelivery\play-1.5.3\KebabDelivery_webApp\conf" />
@@ -88,10 +87,15 @@
       <updated>1737200578962</updated>
       <workItem from="1737200579413" duration="45000" />
       <workItem from="1737200632667" duration="4280000" />
+      <workItem from="1737214618031" duration="11000" />
+      <workItem from="1737214636537" duration="6245000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="routes" />
   </component>
 </project>

@@ -8,7 +8,7 @@ import play.db.jpa.*;
 @Entity
 public class Pedido extends Model {
 
-    public String title;
+    public double precio;
     public Date postedAt;
 
     @Lob
@@ -17,26 +17,26 @@ public class Pedido extends Model {
     @ManyToOne
     public User author;
 
-
     @OneToMany(mappedBy="pedido", cascade=CascadeType.ALL)
-    public List<Comment> comments;
+    public List<Comida> comidaList;
 
-    public Pedido(User author, String title, String content) {
-        this.comments = new ArrayList<Comment>();
+    public Pedido(User author, double precio, String content) {
+        this.comidaList = new ArrayList<Comida>();
         this.author = author;
-        this.title = title;
+        this.precio = precio;
         this.content = content;
         this.postedAt = new Date();
     }
 
-    public Pedido() {
+    public Pedido() {}
 
+
+    // Método para agregar comida al pedido
+    public void addComida(Comida comida) {
+        if (comida != null) {
+            // Agregar la comida a la lista del pedido
+            this.comidaList.add(comida);
+        }
     }
 
-    public Pedido addComment(String author, String content) {
-        Comment newComment = new Comment(this, author, content).save();
-        this.comments.add(newComment);
-        this.save();
-        return this;
-    }
 }

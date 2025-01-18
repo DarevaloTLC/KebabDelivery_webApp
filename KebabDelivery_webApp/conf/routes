@@ -2,14 +2,29 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET     /                                       Application.index
+# Página principal
+GET     /                                       controllers.Application.index()
 
-# Ignore favicon requests
+# Página de inicio de sesión
+GET     /login                                  controllers.Application.loginPage()
+
+# Página de registro
+GET     /register                               controllers.Application.registerPage()
+
+# Registrar un nuevo usuario
+POST    /register                               controllers.Application.register(email, password, fullname)
+
+# Autenticar e iniciar sesión
+POST    /login                                  controllers.Application.login(email, password)
+
+# Cerrar sesión
+GET     /logout                                 controllers.Application.logout()
+
+# Ignorar solicitudes de favicon
 GET     /favicon.ico                            404
 
-# Map static resources from the /app/public folder to the /public path
+# Mapear recursos estáticos desde la carpeta /app/public hacia la ruta /public
 GET     /public/                                staticDir:public
 
-# Catch all
+# Catch all (para manejar rutas no definidas específicamente)
 *       /{controller}/{action}                  {controller}.{action}

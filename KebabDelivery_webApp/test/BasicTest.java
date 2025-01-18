@@ -50,7 +50,7 @@ public class BasicTest extends UnitTest {
         Pedido firstPost = bobPosts.get(0);
         assertNotNull(firstPost);
         assertEquals(bob, firstPost.author);
-        assertEquals("My first Pedido", firstPost.title);
+        assertEquals("My first Pedido", firstPost.precio);
         assertEquals("Kebab Mixto", firstPost.content);
         assertNotNull(firstPost.postedAt);
     }

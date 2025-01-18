@@ -1,4 +1,4 @@
- User(bob):
-   email: bob@gmail.com
-   password: secret
-   fullname: Bob
+User(bob):
+  email: bob@gmail.com
+  password: secret
+  fullname: Bob

@@ -1,62 +1,59 @@
-#{extends 'main.html' /}
-#{set title:'Home' /}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .btn {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
 
-#{if frontPost}
-<div class="post">
-    <h2 class="post-title">
-        <a href="#">${frontPost.title}</a>
-    </h2>
-    <div class="post-metadata">
-        <span class="post-author">by ${frontPost.author.fullname}</span>
-        <span class="post-date">${frontPost.postedAt.format('MMM dd')}</span>
-        <span class="post-comments">
-                &nbsp;|&nbsp;
-                ${frontPost.comments.size() ?: 'no'}
-                comment${frontPost.comments.size().pluralize()}
-                #{if frontPost.comments}
-                    , latest by ${frontPost.comments[-1].author}
-                #{/if}
-            </span>
-    </div>
-    <div class="post-content">
-        ${frontPost.content.nl2br()}
-    </div>
+<div class="container">
+    <h1>Kebab Delivery</h1>
+    <p>Disfruta del mejor Kebab de tu ciudad gracias a nuestro app de delivery.</p>
+    <a href="@{Application.loginPage}" class="btn">Iniciar sesión</a>
+    <p>¿No tienes cuenta? <a href="@{Application.registerPage}">Regístrate aquí</a></p>
 </div>
 
-#{if olderPosts}
-<div class="older-posts">
-    <h3>Older posts <span class="from">from this blog</span></h3>
-
-    #{list items:olderPosts, as:'oldPost'}
-    <div class="post">
-        <h2 class="post-title">
-            <a href="#">${oldPost.title}</a>
-        </h2>
-        <div class="post-metadata">
-                        <span class="post-author">
-                            by ${oldPost.author.fullname}
-                        </span>
-            <span class="post-date">
-                            ${oldPost.postedAt.format('dd MMM yy')}
-                        </span>
-            <div class="post-comments">
-                ${oldPost.comments.size() ?: 'no'}
-                comment${oldPost.comments.size().pluralize()}
-                #{if oldPost.comments}
-                - latest by ${oldPost.comments[-1].author}
-                #{/if}
-            </div>
-        </div>
-    </div>
-    #{/list}
-</div>
-
-#{/if}
-
-#{/if}
-
-#{else}
-<div class="empty">
-    There is currently nothing to read here.
-</div>
-#{/else}
+</body>
+</html>
