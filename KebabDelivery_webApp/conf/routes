@@ -27,6 +27,16 @@ GET     /application/menuPage/{restauranteId}   controllers.Application.menuPage
 
 GET     /application/comidas/{restauranteId}    controllers.Application.getComidasByRestauranteId(restauranteId: Long)
 
+GET     /menuPage/{restauranteId}               controllers.Application.menuPage(restauranteId: Long)
+
+GET     /addToCart/{comidaId}                   controllers.Application.addToCart(comidaId: Long)
+
+GET     /carrito                                controllers.Application.carrito()
+
+POST    /finalizarPedido                        controllers.Application.finalizarPedido()
+
+POST    /removeFromCart/{comidaId}              controllers.Application.removeFromCart(comidaId: Long)
+
 
 
 

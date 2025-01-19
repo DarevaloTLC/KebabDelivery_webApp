@@ -45,8 +45,6 @@ public class Application extends Controller {
             restaurante.save();
             comida.save();
             Logger.info("Comida asociada al restaurante: " + comida.name + " -> " + restaurante.name);
-        } else {
-            Logger.info("La comida ya está asociada al restaurante.");
         }
     }
 
@@ -103,13 +101,6 @@ public class Application extends Controller {
     }
 
 
-
-
-
-
-
-
-
     public static void register(String email, String password, String fullname) {
         Logger.info("Intentando registrar usuario con correo: " + email);
 
@@ -158,6 +149,170 @@ public class Application extends Controller {
             return User.findById(Long.parseLong(userId));
         }
         return null;
+    }
+
+    public static void addToCart(Long comidaId) {
+        User user = getLoggedUser();
+        if (user == null) {
+            flash.error("Debes iniciar sesión para agregar productos al carrito.");
+            loginPage();
+        }
+
+        // Obtener la comida seleccionada
+        Comida comida = Comida.findById(comidaId);
+        if (comida == null) {
+            flash.error("Comida no encontrada.");
+            Logger.warn("Comida no encontrada.");
+            mainPage(); // Redirigir a la página principal
+        }
+
+        // Obtener el restaurante de la comida seleccionada
+        Restaurante restaurante = comida.restauranteList.get(0);  // Suponiendo que hay al menos un restaurante asociado a la comida
+
+        // Obtener o crear un pedido (usando el ID almacenado en la sesión)
+        String pedidoId = session.get("pedidoId");
+        Pedido pedido;
+        if (pedidoId != null) {
+            pedido = Pedido.findById(Long.parseLong(pedidoId));
+            if (pedido == null) {
+                pedido = new Pedido(user, 0, "Pedido temporal");
+                pedido.save();
+                session.put("pedidoId", pedido.id.toString()); // Guardar el ID del pedido en la sesión
+            }
+        } else {
+            pedido = new Pedido(user, 0, "Pedido temporal");
+            pedido.save();
+            session.put("pedidoId", pedido.id.toString()); // Guardar el ID del pedido en la sesión
+        }
+
+        // Agregar la comida al pedido
+        pedido.addComida(comida);
+
+        // Actualizar el precio total
+        pedido.precio += comida.precio;
+
+        // Asociar el restaurante al pedido si no está asociado
+        if (pedido.restaurante == null) {
+            pedido.restaurante = restaurante;
+        }
+
+        // Guardar cambios en la base de datos
+        pedido.save();
+
+        flash.success("Comida añadida al carrito.");
+        menuPage(restaurante.id); // Redirigir al menú del restaurante
+    }
+
+
+    public static void carrito() {
+        User user = getLoggedUser();
+        if (user == null) {
+            flash.error("Debes iniciar sesión para ver tu carrito.");
+            loginPage();
+        }
+
+        // Recuperar el ID del pedido de la sesión
+        String pedidoId = session.get("pedidoId");
+        Logger.info("Pedido ID: "+ pedidoId);
+        if (pedidoId == null) {
+            flash.error("No hay productos en tu carrito.");
+            mainPage(); // Redirigir a la página principal
+        }
+
+        // Recuperar el pedido desde la base de datos
+        Pedido pedido = Pedido.findById(Long.parseLong(pedidoId));
+        if (pedido == null || pedido.comidaList.isEmpty()) {
+            flash.error("Tu carrito está vacío.");
+            mainPage();
+        }
+
+        // Pasar el pedido a la vista
+        render(pedido);
+    }
+
+
+    public static void finalizarPedido(String direccion) {
+        User user = getLoggedUser();
+        if (user == null) {
+            flash.error("Debes iniciar sesión para finalizar el pedido.");
+            renderText("ERROR: Debes iniciar sesión para finalizar el pedido.");
+        }
+
+        String pedidoId = session.get("pedidoId");
+        if (pedidoId == null) {
+            flash.error("No hay productos en tu carrito.");
+            renderText("ERROR: No hay productos en tu carrito.");
+        }
+
+        Pedido pedido = Pedido.findById(Long.parseLong(pedidoId));
+        if (pedido == null || pedido.comidaList.isEmpty()) {
+            flash.error("Tu carrito está vacío.");
+            renderText("ERROR: Tu carrito está vacío.");
+        }
+
+        if (direccion == null || direccion.trim().isEmpty()) {
+            flash.error("Debes proporcionar una dirección de entrega.");
+            renderText("ERROR: Debes proporcionar una dirección de entrega.");
+        }
+
+        // Actualizar el pedido con la dirección
+        pedido.content = direccion;
+        pedido.save();
+
+        // Eliminar el pedido de la sesión
+        session.remove("pedidoId");
+
+        // Notificar éxito
+        flash.success("Pedido realizado con éxito. ¡Gracias por tu compra!");
+        renderText("SUCCESS: Pedido realizado con éxito. ¡Gracias por tu compra!");
+    }
+
+
+
+
+    public static void removeFromCart(Long comidaId) {
+        User user = getLoggedUser();
+        if (user == null) {
+            flash.error("Debes iniciar sesión para eliminar productos del carrito.");
+            loginPage();
+        }
+
+        // Recuperar el ID del pedido de la sesión
+        String pedidoId = session.get("pedidoId");
+        if (pedidoId == null) {
+            flash.error("No hay productos en tu carrito.");
+            mainPage();
+        }
+
+        // Recuperar el pedido desde la base de datos
+        Pedido pedido = Pedido.findById(Long.parseLong(pedidoId));
+        if (pedido == null || pedido.comidaList.isEmpty()) {
+            flash.error("Tu carrito está vacío.");
+            mainPage();
+        }
+
+        // Buscar la comida que se desea eliminar
+        Comida comida = Comida.findById(comidaId);
+        if (comida == null || !pedido.comidaList.contains(comida)) {
+            flash.error("La comida no está en tu carrito.");
+            carrito();  // Redirigir al carrito
+        }
+
+        // Eliminar la comida de la lista de comidas del pedido
+        pedido.comidaList.remove(comida);
+
+        // También eliminar el pedido de la lista de pedidos de la comida
+        comida.pedidoList.remove(pedido);
+
+        // Actualizar el precio total del pedido
+        pedido.precio -= comida.precio;
+
+        // Guardar los cambios en la base de datos
+        comida.save();
+        pedido.save();
+
+        flash.success("Comida eliminada del carrito.");
+        carrito();  // Redirigir al carrito
     }
 
 

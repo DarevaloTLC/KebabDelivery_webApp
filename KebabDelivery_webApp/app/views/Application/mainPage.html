@@ -7,70 +7,71 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
             margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        h1 {
-            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
             color: #333;
         }
-
-        table {
-            width: 80%;
-            margin-top: 20px;
-            border-collapse: collapse;
-            background-color: #fff;
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-
-        th, td {
+        .page-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2a9d8f;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table th, table td {
             padding: 12px;
             text-align: left;
             border: 1px solid #ddd;
         }
-
-        th {
-            background-color: #4CAF50;
+        table th {
+            background-color: #2a9d8f;
             color: white;
         }
-
-        tr:nth-child(even) {
+        table tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-
-        tr:hover {
-            background-color: #ddd;
+        table tr:hover {
+            background-color: #e9f5f4;
         }
-
-        button {
-            background-color: #4CAF50;
+        .view-button {
+            background-color: #2a9d8f;
             color: white;
             border: none;
-            padding: 10px 15px;
-            cursor: pointer;
+            padding: 8px 12px;
             border-radius: 5px;
+            cursor: pointer;
         }
-
-        button:hover {
-            background-color: #45a049;
+        .view-button:hover {
+            background-color: #21867a;
         }
-
         @media screen and (max-width: 768px) {
-            table {
-                width: 100%;
+            table th, table td {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .view-button {
+                padding: 6px 10px;
             }
         }
     </style>
 </head>
 <body>
-<div>
-    <h1>Lista de Restaurantes</h1>
+<div class="container">
+    <div class="page-title">Lista de Restaurantes</div>
 
     <table>
         <thead>
@@ -89,7 +90,7 @@
             <td>${restaurante.phone}</td>
             <td>
                 <form method="GET" action="/application/menuPage/${restaurante.id}">
-                    <button type="submit">Ver comidas</button>
+                    <button type="submit" class="view-button">Ver comidas</button>
                 </form>
             </td>
         </tr>

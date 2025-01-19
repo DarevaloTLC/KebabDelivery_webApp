@@ -1,18 +1,108 @@
-<table>
-    <thead>
-    <tr>
-        <th>Nombre</th>
-        <th>Cantidad</th>
-        <th>Precio (€)</th>
-    </tr>
-    </thead>
-    <tbody>
-    #{list items:comidas, as:'comida'}
-    <tr>
-        <td>${comida.name}</td>
-        <td>${comida.cantidad}</td>
-        <td>${comida.precio}</td>
-    </tr>
-    #{/list}
-    </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - ${restaurante.name}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .restaurant-name {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2a9d8f;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #2a9d8f;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        table tr:hover {
+            background-color: #e9f5f4;
+        }
+        .add-to-cart {
+            background-color: #2a9d8f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background-color: #21867a;
+        }
+        .cart-button {
+            display: block;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .view-cart {
+            background-color: #e76f51;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+        }
+        .view-cart:hover {
+            background-color: #d65a3c;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="restaurant-name">Menú de ${restaurante.name}</div>
+    <table>
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio (€)</th>
+            <th>Acción</th>
+        </tr>
+        </thead>
+        <tbody>
+        #{list items:comidas, as:'comida'}
+        <tr>
+            <td>${comida.name}</td>
+            <td>${comida.precio}</td>
+            <td>
+                <form action="@{Application.addToCart(comida.id)}" method="POST">
+                    <button type="submit" class="add-to-cart">Añadir al carrito</button>
+                </form>
+            </td>
+        </tr>
+        #{/list}
+        </tbody>
+    </table>
+    <div class="cart-button">
+        <a href="@{Application.carrito()}" class="view-cart">Ver carrito</a>
+    </div>
+</div>
+</body>
+</html>

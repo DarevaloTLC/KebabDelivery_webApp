@@ -7,23 +7,12 @@
     <list default="true" id="92e034c1-e8f8-494b-bb56-8ad65ae254cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/KebabDelivery_webApp.iws" beforeDir="false" afterPath="$PROJECT_DIR$/KebabDelivery_webApp.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Comida.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Comida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Restaurante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/loginPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/registerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/registerPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/initial-data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/initial-data.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/mainPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/menuPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/menuPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_loginPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_registerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_registerPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_initial-data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_initial-data.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_mainPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_menuPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_menuPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Comida" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Comida" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Restaurante" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Restaurante" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Comida.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Comida.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Restaurante.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Restaurante.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +84,8 @@
       <workItem from="1737200632667" duration="4280000" />
       <workItem from="1737214618031" duration="11000" />
       <workItem from="1737214636537" duration="21250000" />
-      <workItem from="1737284856989" duration="6916000" />
+      <workItem from="1737284856989" duration="6979000" />
+      <workItem from="1737302083891" duration="6888000" />
     </task>
     <servers />
   </component>
