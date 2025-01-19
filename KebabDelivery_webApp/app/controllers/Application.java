@@ -79,6 +79,11 @@ public class Application extends Controller {
         }
     }
 
+    public static void restaurantPage() {
+        List<Restaurante> restaurantes = Restaurante.findAll();
+        render(restaurantes);
+    }
+
     public static void menuPage(Long restauranteId) {
         Restaurante restaurante = Restaurante.find("byId", restauranteId).first();
         List<Comida> comidas = restaurante.comidaList;
@@ -121,18 +126,34 @@ public class Application extends Controller {
     public static void login() {
         String email = request.params.get("email");
         String password = request.params.get("password");
-        User user = User.connect(email, password);
+
         Logger.info("Intentando login: " + email);
+
+        // Validar las credenciales del usuario
+        User user = User.connect(email, password);
+
         if (user == null) {
-            Logger.warn("Usuario no encontrado");
+            Logger.warn("Credenciales incorrectas para: " + email);
+            // Respuesta en texto plano con un mensaje de error
             renderText("Correo o contraseña incorrectos.");
+            return;
         }
-        Logger.info("Login exitosamente: " + email);
+
+        Logger.info("Inicio de sesión exitoso para: " + email);
         session.put("userId", user.id);
         session.put("userEmail", user.email);
-        renderText("success");
 
+        if (user.isAdmin) {
+            // Redirigir a la página de administración
+            renderText("successAdmin");
+        } else {
+            // Redirigir a la página principal del usuario normal
+            renderText("success");
+        }
     }
+
+
+
 
     // Cerrar sesión
     public static void logout() {
@@ -196,12 +217,19 @@ public class Application extends Controller {
             pedido.restaurante = restaurante;
         }
 
-        // Guardar cambios en la base de datos
+        // Asegurarse de que el restaurante actualice su lista de pedidos
+        if (!restaurante.listaPedidosTienda.contains(pedido)) {
+            restaurante.listaPedidosTienda.add(pedido);
+            restaurante.save();
+        }
+
+        // Guardar cambios en el pedido
         pedido.save();
 
         flash.success("Comida añadida al carrito.");
         menuPage(restaurante.id); // Redirigir al menú del restaurante
     }
+
 
 
     public static void carrito() {
@@ -314,6 +342,29 @@ public class Application extends Controller {
         flash.success("Comida eliminada del carrito.");
         carrito();  // Redirigir al carrito
     }
+
+    public static void viewOrdersPage(Long restauranteId) {
+        // Obtener el restaurante por su ID
+        Restaurante restaurante = Restaurante.findById(restauranteId);
+
+        if (restaurante == null) {
+            renderText("Restaurante no encontrado.");
+            return;
+        }
+
+        // Obtener los pedidos del restaurante, basados en la relación ManyToOne
+        List<Pedido> pedidos = restaurante.listaPedidosTienda;
+
+        // Si no hay pedidos asociados al restaurante
+        if (pedidos.isEmpty()) {
+            renderText("No hay pedidos para este restaurante.");
+            return;
+        }
+
+        // Pasar los pedidos a la vista
+        render(pedidos,restaurante);
+    }
+
 
 
 }

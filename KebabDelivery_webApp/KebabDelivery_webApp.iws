@@ -7,12 +7,11 @@
     <list default="true" id="92e034c1-e8f8-494b-bb56-8ad65ae254cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/KebabDelivery_webApp.iws" beforeDir="false" afterPath="$PROJECT_DIR$/KebabDelivery_webApp.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/mainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/menuPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/menuPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/loginPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_mainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_menuPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_menuPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_loginPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/controllers/Application.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -85,7 +87,7 @@
       <workItem from="1737214618031" duration="11000" />
       <workItem from="1737214636537" duration="21250000" />
       <workItem from="1737284856989" duration="6979000" />
-      <workItem from="1737302083891" duration="6888000" />
+      <workItem from="1737302083891" duration="12809000" />
     </task>
     <servers />
   </component>
@@ -94,5 +96,16 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="routes" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

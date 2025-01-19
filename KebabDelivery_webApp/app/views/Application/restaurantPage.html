@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes Disponibles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .page-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #d62828;
+        }
+        .restaurant-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .restaurant-item:last-child {
+            border-bottom: none;
+        }
+        .restaurant-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .view-button {
+            background-color: #d62828;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .view-button:hover {
+            background-color: #a31621;
+        }
+        @media screen and (max-width: 768px) {
+            .restaurant-name {
+                font-size: 16px;
+            }
+            .view-button {
+                padding: 6px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="page-title">Restaurantes Disponibles</div>
+
+    #{list items:restaurantes, as:'restaurante'}
+    <div class="restaurant-item">
+        <span class="restaurant-name">${restaurante.name}</span>
+        <form method="GET" action="/application/viewOrdersPage/${restaurante.id}">
+            <button type="submit" class="view-button">Ver pedidos</button>
+        </form>
+    </div>
+    #{/list}
+</div>
+</body>
+</html>

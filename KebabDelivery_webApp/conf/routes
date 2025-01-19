@@ -37,6 +37,7 @@ POST    /finalizarPedido                        controllers.Application.finaliza
 
 POST    /removeFromCart/{comidaId}              controllers.Application.removeFromCart(comidaId: Long)
 
+GET     /application/viewOrdersPage/{restauranteId} controllers.Application.viewOrdersPage(restauranteId: Long)
 
 
 

@@ -140,16 +140,21 @@
             method: 'POST',
             body: formData
         })
-            .then(response => response.text()) // Assuming the response is plain text
+            .then(response => response.text()) // La respuesta es texto plano
             .then(data => {
-                if (data.includes('success')) {
+                if (data === 'success') {
                     notification.className = 'notification success';
                     notification.textContent = 'Inicio de sesión exitoso.';
                     notification.style.display = 'block';
                     setTimeout(() => window.location.href = '/application/mainPage', 2000);
+                } else if (data === 'successAdmin') {
+                    notification.className = 'notification success';
+                    notification.textContent = 'Inicio de sesión exitoso como administrador.';
+                    notification.style.display = 'block';
+                    setTimeout(() => window.location.href = '/application/restaurantPage', 2000);
                 } else {
                     notification.className = 'notification error';
-                    notification.textContent = data; // Error message from the server
+                    notification.textContent = data; // Mensaje de error del servidor
                     notification.style.display = 'block';
                 }
             })

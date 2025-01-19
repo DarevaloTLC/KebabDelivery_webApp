@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos del Restaurante</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #d62828;
+        }
+
+        .order-item {
+            background: #fafafa;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .order-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .order-details {
+            margin-bottom: 15px;
+        }
+
+        .order-details span {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .order-details .label {
+            color: #d62828;
+        }
+
+        .food-items {
+            margin-top: 15px;
+        }
+
+        .food-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+            margin-left: 20px;
+        }
+
+        .food-item:last-child {
+            border-bottom: none;
+        }
+
+        .food-item span {
+            color: #333;
+        }
+
+        .food-items strong {
+            color: #d62828;
+        }
+
+        /* Añadir un toque de color al texto */
+        .order-title {
+            color: #d62828;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        /* Resaltar cada detalle de comida */
+        .food-item span {
+            font-size: 16px;
+        }
+
+        /* Sección de botones o acciones */
+        .order-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .order-actions button {
+            background-color: #d62828;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-actions button:hover {
+            background-color: #c52d28;
+        }
+
+        /* Diseño para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .page-title {
+                font-size: 24px;
+            }
+            .order-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="page-title">Pedidos del Restaurante: ${restaurante.name}</div>
+
+    <!-- Loop sobre los pedidos -->
+    #{list items:pedidos, as:'pedido'}
+    <div class="order-item">
+        <div class="order-details">
+            <div class="order-title">ID del Pedido: ${pedido.id}</div>
+            <span class="label">Cliente:</span> ${pedido.author.fullname} <br>
+            <span class="label">Fecha:</span> ${pedido.postedAt} <br>
+            <span class="label">Dirección:</span> ${pedido.content} <!-- Puedes actualizar con el campo de estado real -->
+        </div>
+
+        <!-- Comidas asociadas al pedido -->
+        <div class="food-items">
+            <span><strong>Comidas:</strong></span>
+            #{list items:pedido.comidaList, as:'comida'}
+            <div class="food-item">
+                <span>${comida.name} - ${comida.cantidad} x ${comida.precio}€</span>
+            </div>
+            #{/list}
+        </div>
+    </div>
+    #{/list}
+</div>
+
+</body>
+</html>
