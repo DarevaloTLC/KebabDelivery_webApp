@@ -13,11 +13,15 @@ public class Restaurante extends Model{
     @OneToMany(mappedBy = "restaurante")
     public List<Pedido> listaPedidosTienda;
 
+    @ManyToMany
+    public List<Comida> comidaList;
+
     public Restaurante(String name, String address, String phone) {
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.listaPedidosTienda = new ArrayList<>();
+        this.comidaList = new ArrayList<>();
     }
     public Restaurante() {}
 }

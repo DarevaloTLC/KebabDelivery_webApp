@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92e034c1-e8f8-494b-bb56-8ad65ae254cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/KebabDelivery_webApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KebabDelivery_webApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KebabDelivery_webApp.iws" beforeDir="false" afterPath="$PROJECT_DIR$/KebabDelivery_webApp.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Comida.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Comida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/loginPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/registerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/registerPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/initial-data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/initial-data.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_loginPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_registerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_registerPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_initial-data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_initial-data.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Comida" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Comida" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Restaurante" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Restaurante" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Comida.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Comida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Restaurante.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Restaurante.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -40,23 +52,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/didic/PES/PesWeb",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/didic/PES/PesWeb&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\didic\PES\KebabDelivery\play-1.5.3\KebabDelivery_webApp\conf" />
@@ -81,7 +94,8 @@
       <workItem from="1737200579413" duration="45000" />
       <workItem from="1737200632667" duration="4280000" />
       <workItem from="1737214618031" duration="11000" />
-      <workItem from="1737214636537" duration="9619000" />
+      <workItem from="1737214636537" duration="21250000" />
+      <workItem from="1737284856989" duration="6916000" />
     </task>
     <servers />
   </component>

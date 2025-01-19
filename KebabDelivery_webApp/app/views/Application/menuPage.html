@@ -1,0 +1,18 @@
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        <th>Precio (€)</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:comidas, as:'comida'}
+    <tr>
+        <td>${comida.name}</td>
+        <td>${comida.cantidad}</td>
+        <td>${comida.precio}</td>
+    </tr>
+    #{/list}
+    </tbody>
+</table>

@@ -20,6 +20,19 @@ POST    /login                                  controllers.Application.login(em
 # Cerrar sesión
 GET     /logout                                 controllers.Application.logout()
 
+# Página principal
+GET     /mainPage                               controllers.Application.mainPage()
+
+GET     /application/menuPage/{restauranteId}   controllers.Application.menuPage(restauranteId: Long)
+
+GET     /application/comidas/{restauranteId}    controllers.Application.getComidasByRestauranteId(restauranteId: Long)
+
+
+
+
+
+
+
 # Ignorar solicitudes de favicon
 GET     /favicon.ico                            404
 

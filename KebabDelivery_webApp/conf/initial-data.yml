@@ -3,3 +3,13 @@ User(admin):
   password: admin
   fullname: admin
   isAdmin : true
+
+Restaurante(KebabCastelldefels):
+  name: KebabCastefaMustafa
+  address: CarrerMustafa
+  phone: 666 666 666
+
+Comida(KebabMixto):
+  name: KebabMixto
+  cantidad: 1
+  precio: 5.50
