@@ -11,45 +11,6 @@ import java.util.Objects;
 
 public class Application extends Controller {
 
-    @Before
-    public static void initDB() {
-        // Verificar si el usuario admin ya existe
-        User admin = User.find("byEmail", "admin@admin.com").first();
-        if (admin == null) {
-            admin = new User("admin@admin.com", "admin", "admin");
-            admin.isAdmin = true;  // Establecer como admin
-            admin.save();
-            Logger.info("Usuario admin creado: " + admin.email);
-        }
-
-        // Verificar si el restaurante "KebabCastelldefels" ya existe
-        Restaurante restaurante = Restaurante.find("byName", "KebabCastefaMustafa").first();
-        if (restaurante == null) {
-            restaurante = new Restaurante("KebabCastefaMustafa", "CarrerMustafa", "666 666 666");
-            restaurante.save();
-            Logger.info("Restaurante creado: " + restaurante.name);
-        }
-
-        // Verificar si la comida "Kebab Mixto" ya existe
-        Comida comida = Comida.find("byName", "KebabMixto").first();
-        if (comida == null) {
-            comida = new Comida("KebabMixto", 1, 5.50);
-            comida.save();
-            Logger.info("Comida creada: " + comida.name);
-        }
-
-        // Asociar la comida "Kebab Mixto" al restaurante "KebabCastelldefels"
-        if (!restaurante.comidaList.contains(comida)) {
-            restaurante.comidaList.add(comida);
-            comida.restauranteList.add(restaurante);
-            restaurante.save();
-            comida.save();
-            Logger.info("Comida asociada al restaurante: " + comida.name + " -> " + restaurante.name);
-        }
-    }
-
-
-
     // Página principal
     public static void index() {
         User user = getLoggedUser();
